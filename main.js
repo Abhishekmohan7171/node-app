@@ -89,4 +89,13 @@ app.get("/webhooks", (err, res) => {
   res.end();
 });
 
+app.post("/webhooks", (err, res) => {
+  console.log("<------------Response------------>", res);
+  console.error("<----------Error--------------->", err);
+  res.status(200);
+  res.json({ working: true });
+  res.end();
+});
+
 module.exports = server;
+
