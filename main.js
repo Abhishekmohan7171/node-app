@@ -89,9 +89,8 @@ app.get("/webhooks", (err, res) => {
   res.end();
 });
 
-app.post("/webhooks", (err, res) => {
-  console.log("<------------Response------------>", res);
-  console.error("<----------Error--------------->", err);
+app.post("/webhooks", (req, res) => {
+  console.log("<------------Response------------>", req.body);
   res.status(200);
   res.json({ working: true });
   res.end();
